@@ -2,11 +2,15 @@
 #include<cstdint>
 
 #ifndef DECOMPOSE_H
-using number=unsigned long long;
 
-void divide(number X,number* begin,number* end,int threads);
+void decompose(int beginnings[], int endings[], int leastCommonMultiple);
 
-void decompose(number X,number start,number end,std::vector<number> &divisors);
+void generatePiZeroList(int primeNumberList[], int intputNumber);  
 
-void checkFound(number X,number divisors[],int divisorsSize);
+void generateSlaveList(int startOfRange, int endOfRange, int leastCommonMutiple);
+
+void assembleList(int piZeroList[], int slaveList[], int outputList[]);
+
+void findFinalAnswers(int starts[], int ends[], int output[]);
+
 #endif
